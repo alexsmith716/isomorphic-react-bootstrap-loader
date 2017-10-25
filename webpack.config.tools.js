@@ -1,6 +1,8 @@
 
 const WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
 
+console.log('>>>>>>>> webpack.config.tools.js <<<<<<<<<<<<');
+
 module.exports = {
 
   debug: false,

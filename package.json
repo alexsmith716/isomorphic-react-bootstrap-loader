@@ -10,6 +10,7 @@
     "start-prod": "BABEL_DISABLE_CACHE=1 NODE_ENV=production node index.js",
     "build-start": "yarn clear && yarn build && yarn build-server && yarn start-prod",
     "build": "yarn clear && yarn build-client && yarn build-server",
+    "build-client-dev": "yarn clear-client && BOOTSTRAPRC_LOCATION=.bootstraprc webpack --config webpack.config.dev.js",
     "build-client": "yarn clear-client && BOOTSTRAPRC_LOCATION=.bootstraprc NODE_ENV=production webpack --config webpack.config.prod.js",
     "build-server": "yarn clear-server && NODE_ENV=production BABEL_DISABLE_CACHE=1 webpack --config webpack.config.server.js",
     "clear": "rimraf build",
