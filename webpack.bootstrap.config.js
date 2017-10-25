@@ -8,7 +8,7 @@ const fs = require('fs');
 const bootstraprcCustomLocation = process.env.BOOTSTRAPRC_LOCATION;
 // const bootstraprcCustomLocation = getBootstraprcCustomLocation();
 
-console.log('Using the bootstrap-loader bootstraprcCustomLocation: ', bootstraprcCustomLocation);
+console.log('>>>>>>>> webpack.bootstrap.config.js <<<<<<<<<<<<: ', bootstraprcCustomLocation);
 
 let defaultBootstraprcFileExists;
 
