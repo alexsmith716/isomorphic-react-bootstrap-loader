@@ -58,34 +58,22 @@ module.exports = {
       },
 
       {
-        test: /(global\.css)$/,
-        use:[
-          { loader: 'style-loader' }, 
-          { loader: 'css-loader' }
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+          'postcss-loader',
         ],
       },
-
+      
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use:[
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[name]_[local]_[hash:base64:5]',
-                sourceMap: true,
-              }
-            }, 
-            {
-              loader: 'postcss-loader',
-            }, 
-            {
-              loader: 'sass-loader',
-            }
-          ]
-        })
+        use: [
+          'style-loader',
+          'css-loader?modules&importLoaders=2&localIdentName=[name]__[local]__[hash:base64:5]',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
 
       {

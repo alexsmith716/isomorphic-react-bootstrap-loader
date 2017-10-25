@@ -28,9 +28,6 @@ const app = express();
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-console.log('>>>>>>>>>>>>>> SERVER.js > process.env.BOOTSTRAPRC_LOCATION: ', process.env.BOOTSTRAPRC_LOCATION);
-console.log('>>>>>>>>>>>>>> SERVER.js > process.env.NODE_ENV: ', process.env.NODE_ENV);
-
 if (process.env.NODE_ENV === 'development') {
 
   const compiler = webpack(webpackConfigDev);
@@ -45,7 +42,7 @@ if (process.env.NODE_ENV === 'development') {
 
 }
 
-console.log('>>>>>>>>>>>>>> SERVER.js > process.env.NODE_ENV: ', process.env.NODE_ENV);
+console.log('>>>>>>>>>>>>>>2 SERVER.js > process.env.NODE_ENV: ', process.env.NODE_ENV);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

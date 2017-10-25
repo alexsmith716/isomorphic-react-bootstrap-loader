@@ -6,7 +6,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "start-dev": "BABEL_DISABLE_CACHE=1 BOOTSTRAPRC_LOCATION=.bootstraprc NODE_ENV=development nodemon index.js --ignore client/ --ignore webpack/webpack-assets.json",
+    "start-dev": "BABEL_DISABLE_CACHE=1 BOOTSTRAPRC_LOCATION=.bootstraprc NODE_ENV=development nodemon index.js",
     "start-prod": "BABEL_DISABLE_CACHE=1 NODE_ENV=production node index.js",
     "build-start": "yarn clear && yarn build && yarn build-server && yarn start-prod",
     "build": "yarn clear && yarn build-client && yarn build-server",
